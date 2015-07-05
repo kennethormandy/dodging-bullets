@@ -6,7 +6,13 @@
 
 // Unordered Lists
 //
-// Lists with mobile first hanging bullets.
+// Lists with mobile-first, hanging bullets.
+//
+// At small screen sizes, the list items
+// are indented, creating a visual alignment between the bullets and the outer
+// margin. At larger screen sizes, where there is room, the bullets will hang,
+// creating the prefered visual alignment between the list item text and the
+// outer margin.
 //
 // Markup:
 // <ul>
@@ -43,6 +49,17 @@ ol {
 //
 // Lists with mobile first tabular, hanging numbers.
 //
+// At small screen sizes, the list items
+// are indented, creating a visual alignment between the numbers and the outer
+// margin. At larger screen sizes, where there is room, the numbers hang,
+// creating the prefered visual alignment between the list item text and the
+// outer margin.
+//
+// Based on [Normalize-OpenType.css](http://github.com/kennethormandy/normalize-opentype.css),
+// and when the font supports it, tabular numbers are also used to vertically stack
+// the item numbers. The old style variant is also chosen, to keep the x-height
+// in-line with the list item text.
+//
 // Markup:
 // <ol>
 //   <li>Bell Centennial</li>
@@ -55,7 +72,7 @@ ol {
 //   <li>Yale</li>
 // </ol>
 //
-// Stylegude: list.ordered-list
+// Styleguide: list.ordered-list
 ol {
   counter-reset: li;
   & > li {
