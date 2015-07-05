@@ -1,0 +1,24 @@
+{
+  "name": "dodging-bullets",
+  "version": "0.0.0",
+  "description": "A mobile-first approach to hanging bullets and ordinals for ordered and unordered lists.",
+  "homepage": "http://dodging-bullets.kennethormandy.com",
+  "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
+  "license": "MIT",
+  "private": true,
+  "repository": "git@github.com:kennethormandy/dodging-bullets.git",
+  "keywords": [
+    "typography",
+    "type",
+    "fonts",
+    "lists",
+    "reset",
+    "mobile first"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified…yet! Pull requests on kennethormandy/dodging-bullets are greatly appreciated.\" && exit 1"
+  },
+  "devDependencies": {
+    "surge": "^0.14.3"
+  }
+}

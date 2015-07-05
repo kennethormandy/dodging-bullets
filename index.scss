@@ -1,0 +1,77 @@
+// Dodging Bullets
+//
+// A mobile-first approach to hanging bullets and ordinals for ordered and unordered lists.
+//
+// Styleguide: list
+
+// Unordered Lists
+//
+// Lists with mobile first hanging bullets.
+//
+// Markup:
+// <ul>
+//   <li>Skia</li>
+//   <li>Carter Sans</li>
+//   <li>Georgia</li>
+//   <li>Verdana</li>
+//   <li>Yale</li>
+//   <li>Bitstream Charter</li>
+//   <li>Bell Centennial</li>
+//   <li>Tahoma</li>
+// </ul>
+//
+// Styleguide: list.unordered-list
+ul,
+ol {
+  padding-left: 0;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  // …hang after there’s enough space
+  // @include media($mid) {
+  @media (min-width: 50em) {
+    margin-left: 0;
+    // @include shift(0);
+  }
+  ul,
+  ol {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+  }
+}
+
+// Ordered Lists
+//
+// Lists with mobile first tabular, hanging numbers.
+//
+// Markup:
+// <ol>
+//   <li>Bell Centennial</li>
+//   <li>Bitstream Charter</li>
+//   <li>Carter Sans</li>
+//   <li>Georgia</li>
+//   <li>Skia</li>
+//   <li>Tahoma</li>
+//   <li>Verdana</li>
+//   <li>Yale</li>
+// </ol>
+//
+// Stylegude: list.ordered-list
+ol {
+  counter-reset: li;
+  & > li {
+    list-style: none;
+    position: relative;
+    &:before {
+      content: counter(li) "."; // Use the counter as content
+      counter-increment: li; // Increment the counter by 1
+      text-align: right;
+      min-width: 2em; // Min-width of area for number
+      margin-left: -2em; // Hang number
+      padding-right: 1.5em; // Space between number and list item
+      position: absolute;
+      font-feature-settings: "kern" 0, "tnum" 1, "onum" 1, "liga" 1;
+    }
+  }
+}
