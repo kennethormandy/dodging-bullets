@@ -66,10 +66,13 @@ ol {
     &:before {
       content: counter(li) "."; // Use the counter as content
       counter-increment: li; // Increment the counter by 1
+      text-align: left;
+      // min-width: 2em; // Min-width of area for number
+      // margin-left: -2em; // Hang number
+      // padding-right: 0em; // Space between number and list item
+      transform: translateX(-100%);
+      padding-right: 0.5em;
       text-align: right;
-      min-width: 2em; // Min-width of area for number
-      margin-left: -2em; // Hang number
-      padding-right: 1.5em; // Space between number and list item
       position: absolute;
       font-feature-settings: "kern" 0, "tnum" 1, "onum" 1, "liga" 1;
     }
