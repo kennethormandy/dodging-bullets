@@ -5,7 +5,6 @@
   "homepage": "http://dodging-bullets.kennethormandy.com",
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
   "license": "MIT",
-  "private": true,
   "repository": "git@github.com:kennethormandy/dodging-bullets.git",
   "keywords": [
     "typography",
