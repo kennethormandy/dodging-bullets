@@ -13,7 +13,7 @@ A mobile-first approach to hanging bullets and ordinals for ordered and unordere
 To include it with your project, install Dodging Bullets through [npm](http://npmjs.org):
 
 ```
-npm install --save kennethormandy/dodging-bullets
+npm install --save dodging-bullets
 ```
 
 …and then import it into your Sass files, depending on how you are including modules:
