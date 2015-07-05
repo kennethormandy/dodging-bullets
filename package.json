@@ -16,9 +16,15 @@
     "mobile first"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified…yet! Pull requests on kennethormandy/dodging-bullets are greatly appreciated.\" && exit 1"
+    "test": "echo \"Error: no test specified…yet! Pull requests on kennethormandy/dodging-bullets are greatly appreciated.\" && exit 1",
+    "styleguide": "kss-node --source ./ --destination ./examples/ --mask index.scss --css /index.css --homepage ./README.md && cp ./index.scss ./examples/index.scss",
+    "examples": "npm run styleguide && harp server examples",
+    "compile": "npm run styleguide && harp compile examples ./www",
+    "deploy": "npm run compile && surge www dodging-bullets.kennethormandy.com"
   },
   "devDependencies": {
-    "surge": "^0.14.3"
+    "kss": "2.1.0",
+    "surge": "latest",
+    "harp": "0.17.0"
   }
 }

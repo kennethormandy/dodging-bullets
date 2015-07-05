@@ -14,3 +14,4 @@ bower_components/
 
 # Compile directories
 www/
+examples/*
